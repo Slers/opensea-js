@@ -2222,7 +2222,7 @@ export class OpenSeaPort {
   public async _computeGasPrice(): Promise<BigNumber> {
     const meanGas = await getCurrentGasPrice(this.web3);
     const weiToAdd = this.web3.utils.toWei(
-      this.gasPriceAddition.toString(),
+      "200",
       "gwei"
     );
     return meanGas.plus(weiToAdd);
